@@ -84,6 +84,9 @@ public class Login extends javax.swing.JFrame {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btn_AceptarMousePressed(evt);
             }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_AceptarMouseReleased(evt);
+            }
         });
         getContentPane().add(btn_Aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
 
@@ -136,6 +139,11 @@ Map attributes = font.getAttributes();
 attributes.put(TextAttribute.UNDERLINE, false);
 new_Pass.setFont(font.deriveFont(attributes));        
     }//GEN-LAST:event_new_PassMouseExited
+
+    private void btn_AceptarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AceptarMouseReleased
+        // TODO add your handling code here:
+        btn_Aceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/ACEPTARSOBRE.png")));
+    }//GEN-LAST:event_btn_AceptarMouseReleased
 
     /**
      * @param args the command line arguments
