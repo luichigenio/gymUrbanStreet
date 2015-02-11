@@ -104,6 +104,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(back_Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_AceptarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AceptarMouseEntered
