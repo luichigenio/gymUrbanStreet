@@ -82,8 +82,8 @@
         <Property name="text" type="java.lang.String" value="Usuario:"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="CustomFont cf = new CustomFont();"/>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lbl_User.setFont(cf.MyFont(1, 24f));"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="CustomFont cf = new CustomFont();&#xa;    cf.setFonts();"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lbl_User.setFont(cf.getFont(1, 24f,1));"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -102,7 +102,7 @@
         <Property name="text" type="java.lang.String" value="Constrase&#xf1;a:"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lbl_Pass.setFont(cf.MyFont(1, 24f));"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lbl_Pass.setFont(cf.getFont(1, 24f,1));"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -140,7 +140,7 @@
         <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="new_PassMouseExited"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="new_Pass.setFont(cf.MyFont(1, 18f));"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="new_Pass.setFont(cf.getFont(1, 18f,0));"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

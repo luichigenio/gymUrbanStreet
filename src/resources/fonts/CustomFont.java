@@ -7,37 +7,46 @@
 package resources.fonts;
   import java.awt.Font;
 import java.io.InputStream;
+import java.util.ArrayList;
 /**
  *
  * @author LAGV
  */
-public class CustomFont {
+public  class CustomFont {
   
 
 
-    private Font font = null;
+    private static ArrayList<Font> fonts = new ArrayList<>();;
 
-    public CustomFont() {
-        String fontName = "Akzidenz Grotesk (R) Condensed Medium.ttf" ;
+    public void setFonts() {
         try {
-            //Se carga la fuente
-            InputStream is =  getClass().getResourceAsStream(fontName);
-            font = Font.createFont(Font.TRUETYPE_FONT, is);
+            //fuente 0 Ligth
+            InputStream is =  getClass().getResourceAsStream("AkzidenzGrotesk-LightCond.otf");
+            fonts.add(Font.createFont(Font.TRUETYPE_FONT, is));
+            //fuente 1 Medium
+            is =  getClass().getResourceAsStream("Akzidenz Grotesk (R) Condensed Medium.ttf");
+            //fuente Italic
+            fonts.add(Font.createFont(Font.TRUETYPE_FONT, is));
+            is =  getClass().getResourceAsStream("Akzidenz Grotesk (R) Condensed Medium Italic.ttf");
+            fonts.add(Font.createFont(Font.TRUETYPE_FONT, is));
         } catch (Exception ex) {
             //Si existe un error se carga fuente por defecto ARIAL
-            System.err.println(fontName + " No se cargo la fuente");
-            font = new Font("Arial", Font.PLAIN, 14);            
+            System.err.println(" No se cargon todas la fuente");
+            fonts.add(new Font("Arial", Font.PLAIN, 14));            
         }
   }
 
     /* Font.PLAIN = 0 , Font.BOLD = 1 , Font.ITALIC = 2
  * tamanio = float
  */
-    public Font MyFont( int estilo, float tamanio)
+    public Font getFont( int estilo, float tamanio, int pos)
     {
-        Font tfont = font.deriveFont(estilo, tamanio);
+        
+        Font tfont = fonts.get(pos).deriveFont(estilo, tamanio);
         return tfont;
     }
+    
+    
 
 }
 

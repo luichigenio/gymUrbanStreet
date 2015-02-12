@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
  */
 public class Login extends javax.swing.JFrame {
 
+  
     /**
      * Creates new form login
      */
@@ -38,6 +39,7 @@ public class Login extends javax.swing.JFrame {
         textoFondo1 = new javax.swing.JLabel();
         textoFondo2 = new javax.swing.JLabel();
         CustomFont cf = new CustomFont();
+        cf.setFonts();
         lbl_User = new javax.swing.JLabel();
         lbl_Pass = new javax.swing.JLabel();
         btn_Aceptar = new javax.swing.JLabel();
@@ -61,13 +63,13 @@ public class Login extends javax.swing.JFrame {
         textoFondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/TEXTFIEL.png"))); // NOI18N
         getContentPane().add(textoFondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 310, 40));
 
-        lbl_User.setFont(cf.MyFont(1, 24f));
+        lbl_User.setFont(cf.getFont(1, 24f,1));
         lbl_User.setBackground(new java.awt.Color(185, 185, 185));
         lbl_User.setForeground(new java.awt.Color(185, 185, 185));
         lbl_User.setText("Usuario:");
         getContentPane().add(lbl_User, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        lbl_Pass.setFont(cf.MyFont(1, 24f));
+        lbl_Pass.setFont(cf.getFont(1, 24f,1));
         lbl_Pass.setBackground(new java.awt.Color(185, 185, 185));
         lbl_Pass.setForeground(new java.awt.Color(185, 185, 185));
         lbl_Pass.setText("Constraseña:");
@@ -90,7 +92,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(btn_Aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
 
-        new_Pass.setFont(cf.MyFont(1, 18f));
+        new_Pass.setFont(cf.getFont(1, 18f,0));
         new_Pass.setForeground(new java.awt.Color(185, 185, 185));
         new_Pass.setText("Olvidé mi contraseña");
         new_Pass.addMouseListener(new java.awt.event.MouseAdapter() {
